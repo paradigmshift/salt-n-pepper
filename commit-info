@@ -1,0 +1,6 @@
+-*- mode: org -*-
+#+STARTUP: showeverything
+* CHANGES
+
+* TODO
+- [ ] input passphrase and message from command line
