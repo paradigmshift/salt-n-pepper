@@ -1,11 +1,10 @@
-;;;; usage: (code-decode [passphrase] [message])
+;;;; salt-n-pepper.lisp
 
-(defun switch (a b lst)
-  "Switch elements at position a & b with each other"
-  (let ((newlst (copy-list lst)))
-    (psetf (nth a newlst) (nth b newlst)
-           (nth b newlst) (nth a newlst))
-    newlst))
+(in-package #:salt-n-pepper)
+
+;;; "salt-n-pepper" goes here. Hacks and glory await!
+
+;;;; usage: (code-decode [passphrase] [message])
 
 (defun key-init (key)
   (let* ((key-char (coerce key 'list))
@@ -24,13 +23,13 @@
                       (nth (mod n (length key-list))
                            key-list))
                    (length key-list)))
-      (setq lst (switch n j lst)))
+      (setq lst (list-switch n j lst)))
     lst))
 
 (defun output-generator (i j s msg result)
   (setq i (mod (+ i 1) 256))
   (setq j (mod (+ j (nth i s)) 256))
-  (setq s (switch (nth i s)
+  (setq s (list-switch (nth i s)
                   (nth j s) s))
   (push (boole boole-xor (mod (+ (nth i s)
                                  (nth j s))
@@ -52,6 +51,7 @@
             (coerce txt 'list))
     (setq result
           (output-generator 0 0 (scramble (list-init) (key-init key)) (reverse msg) '()))
-    (mapcar (lambda (x)
-              (format t "~a" (code-char x)))
-            result)))
+    (map 'string (lambda (x)
+                   (code-char x))
+         result)))
+
