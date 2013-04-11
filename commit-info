@@ -1,7 +1,7 @@
 -*- mode: org -*-
 #+STARTUP: showeverything
 * CHANGES
-** created lisp system from existing project; can now be loaded through quicklisp with (ql:quickload "salt-n-pepper")
+** changed some function names
 
 * TODO
 - [ ] input passphrase and message from command line

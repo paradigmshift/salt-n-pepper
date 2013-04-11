@@ -4,5 +4,5 @@
   (:use #:cl)
   (:export #:code-decode)
   (:shadowing-import-from #:my-tools
-                          #:list-switch))
+                          #:l-swap))
 
