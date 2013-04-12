@@ -1,7 +1,7 @@
 -*- mode: org -*-
 #+STARTUP: showeverything
 * CHANGES
-** changed some function names
+** added FreeBSD License
 
 * TODO
 - [ ] input passphrase and message from command line
