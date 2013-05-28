@@ -2,9 +2,9 @@
 
 (asdf:defsystem #:salt-n-pepper
   :serial t
-  :description "Describe salt-n-pepper here"
-  :author "Mozart Reina"
-  :license "Specify license here"
+  :description "RC4 encryption library"
+  :author "Mozart Reina <mozart@mozartreina.com>"
+  :license "FreeBSD License"
   :depends-on (#:my-tools)
   :components ((:file "package")
                (:file "salt-n-pepper")))
