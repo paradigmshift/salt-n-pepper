@@ -1,7 +1,5 @@
--*- mode: org -*-
-#+STARTUP: showeverything
-* CHANGES
-** added FreeBSD License
+Replaced custom function `l-swap` with `rotate-f`.
 
-* TODO
-- [ ] input passphrase and message from command line
+Added some tests.
+
+ TODO

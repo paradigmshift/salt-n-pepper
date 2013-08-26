@@ -19,11 +19,11 @@
   (let ((j 0))
     (dotimes (n 255)
       (setq j (mod (+ j
-                      (nth n lst)
-                      (nth (mod n (length key-list))
-                           key-list))
+                      (elt lst n)
+                      (elt key-list
+                           (mod n (length key-list))))
                    (length key-list)))
-      (setq lst (l-swap n j lst)))
+      (rotatef (elt lst n) (elt lst j)))
     lst))
 
 (defun output-generator (i j s msg result)

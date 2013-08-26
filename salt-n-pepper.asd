@@ -7,5 +7,6 @@
   :license "FreeBSD License"
   :depends-on (#:my-tools)
   :components ((:file "package")
-               (:file "salt-n-pepper")))
+               (:file "salt-n-pepper")
+               (:file "salt-n-pepper-tests")))
 
