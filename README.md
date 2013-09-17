@@ -2,6 +2,8 @@
 
 A (very) naive and basic library for encrypting (RC4) text.
 
+[![endorse](https://api.coderwall.com/paradigmshift/endorsecount.png)](https://coderwall.com/paradigmshift)
+
 ### License
 
 FreeBSD License
